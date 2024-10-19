@@ -1,5 +1,5 @@
 {
-  "name": "php/data",
+  "name": "container/data",
   "description": "",
   "type": "library",
   "keywords": ["data", "php", "helper", "manipulator"],
