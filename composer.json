@@ -1,0 +1,21 @@
+{
+  "name": "data/data",
+  "description": "",
+  "type": "library",
+  "keywords": ["data", "php", "helper", "manipulator"],
+  "license": "MIT",
+  "autoload": {
+    "psr-4": {
+      "Data\\": "lib/"
+    }
+  },
+  "require": {},
+  "authors": [
+    {
+      "name": "Shahzada Modassir",
+      "email": "codingmodassir@gmail.com",
+      "homepage": "https://github.com/shahzadamodassir"
+    }
+  ],
+  "minimum-stability": "dev"
+}
