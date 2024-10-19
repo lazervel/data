@@ -1,5 +1,5 @@
 {
-  "name": "data/data",
+  "name": "express/data",
   "description": "",
   "type": "library",
   "keywords": ["data", "php", "helper", "manipulator"],
