@@ -11,13 +11,6 @@ final class NumericManipulator extends CustomReturner
   /**
    * Override and store updated value to prepare returns and other compilation.
    * 
-   * @var mixed $value
-   */
-  protected $value;
-
-  /**
-   * 
-   * 
    * @param mixed $value [required]
    * @return void
    */

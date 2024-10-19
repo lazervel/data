@@ -11,6 +11,15 @@ abstract class CustomReturnerBase
   private const def = '/^(?:string|regexp)$/';
   protected $value;
   private $type;
+  private const construct = [
+    'regexp'   => '/(?:)/',
+    'string'   => '',
+    'numeric'  => 0,
+    'array'    => [],
+    'assoc'    => '<!ASSOC ,>',
+    'function' => 'Function',
+    'object'   => '{}'
+  ];
 
   /**
    * Override and store updated value to prepare returns and other compilation.
@@ -48,6 +57,15 @@ abstract class CustomReturnerBase
   }
 
   /**
+   * 
+   * @return mixed modified previous value
+   */
+  public function parent()
+  {
+    return $this->prev;
+  }
+
+  /**
    * Return latest last update value
    * 
    * @return mixed
@@ -75,6 +93,16 @@ abstract class CustomReturnerBase
   private function numeric()
   {
     return (string) $this->value;
+  }
+
+  /**
+   * Returns current value of constructor
+   * 
+   * @return mixed An constructor
+   */
+  public function constructor()
+  {
+    return self::construct[$this->type];
   }
 
   /**

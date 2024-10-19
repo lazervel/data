@@ -11,20 +11,26 @@ final class ArrayManipulator extends CustomReturner
   /**
    * Override and store updated value to prepare returns and other compilation.
    * 
-   * @var mixed $value
+   * @param mixed $value [required]
+   * @return void
    */
-  protected $value;
+  public function __construct(&$value)
+  {
+    $this->value = &$value;
+    parent::__construct($value);
+  }
 
   /**
    * 
    * 
-   * @param mixed $value [required]
-   * @return void
+   * @param mixed $value  [required]
+   * @param mixed $values [optional]
+   * 
+   * @return \Data\Utilities\NumericManipulator
    */
-  public function __construct($value)
+  public function push($value, ...$values)
   {
-    $this->value = $value;
-    parent::__construct($value);
+    return $this->return(\array_push($this->value, $value, ...$values), $this->value);
   }
 }
 ?>

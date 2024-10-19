@@ -70,6 +70,18 @@ class CustomReturner extends CustomReturnerBase implements CustomReturnerInterfa
   }
 
   /**
+   * Initialize new Manipulator with overrides value
+   * Returns an compiled Manipulator to initialized with class Object.
+   * 
+   * @param mixed $value [required] Overrides current and prev value
+   * @return \Data\Utilities\FunctionManipulator|\Data\Utilities\ObjectManipulator|\Data\Utilities\StringManipulator|\Data\Utilities\ArrayManipulator|\Data\Utilities\ArrayAssocManipulator|\Data\Utilities\RegexManipulator|\Data\Utilities\NumericManipulator
+   */
+  public function override($value)
+  {
+    return $this->compile($value)->return();
+  }
+
+  /**
    * 
    * @internal Error Handler
    * 
@@ -81,6 +93,17 @@ class CustomReturner extends CustomReturnerBase implements CustomReturnerInterfa
   private function error(int $type, string $msg)
   {
     $this->lastError = $msg;
+  }
+
+  /**
+   * Initialize new Manipulator with prvious value
+   * Returns an compiled Manipulator to initialized with class Object.
+   * 
+   * @return \Data\Utilities\FunctionManipulator|\Data\Utilities\ObjectManipulator|\Data\Utilities\StringManipulator|\Data\Utilities\ArrayManipulator|\Data\Utilities\ArrayAssocManipulator|\Data\Utilities\RegexManipulator|\Data\Utilities\NumericManipulator
+   */
+  public function parentWith()
+  {
+    return $this->return($this->prev);
   }
 
   /**
@@ -121,11 +144,13 @@ class CustomReturner extends CustomReturnerBase implements CustomReturnerInterfa
    * @param mixed $value [optional] Override current value
    * @return \Data\Utilities\FunctionManipulator|\Data\Utilities\ObjectManipulator|\Data\Utilities\StringManipulator|\Data\Utilities\ArrayManipulator|\Data\Utilities\ArrayAssocManipulator|\Data\Utilities\RegexManipulator|\Data\Utilities\NumericManipulator
    */
-  public function return($value = null)
+  public function return($value = null, $prev = null)
   {
     $this->value = $value ?? $this->value;
     $manipulator = self::MANIPULATORS[$this->dataType($this->value)];
-    return new $manipulator($this->value);
+    $manipulator = new $manipulator($this->value);
+    $manipulator->prev = $prev;
+    return $manipulator;
   }
 
   /**
