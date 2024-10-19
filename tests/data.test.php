@@ -4,8 +4,10 @@ require __DIR__.'/../vendor/autoload.php';
 
 use Data\Data;
 
-$out = Data::input('/home/root/dir/focus')->explode('/')->push('last', 'log');
+$output = new Data('    local - username    ');
 
-print_r($out);
+$data = $output->trim()->toUpper()->explode('-');
+
+print_r($data);
 
 ?>

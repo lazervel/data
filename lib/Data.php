@@ -22,7 +22,7 @@ class Data
 
   public function __call($method, $arguments)
   {
-    return $this->input($this->value)->$method($arguments);
+    return $this->input($this->value)->$method(...$arguments);
   }
 
   /**
