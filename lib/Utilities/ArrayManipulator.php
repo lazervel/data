@@ -32,5 +32,38 @@ final class ArrayManipulator extends CustomReturner
   {
     return $this->return(\array_push($this->value, $value, ...$values), $this->value);
   }
+
+  /**
+   * 
+   * 
+   * @param array $array  [required]
+   * @param array $arrays [optional]
+   * 
+   * @return \Data\Utilities\ArrayManipulator
+   */
+  public function merge(array $array, array ...$arrays)
+  {
+    return $this->return($this->phpModel('array_merge', $this->value, $array, ...$arrays));
+  }
+
+  /**
+   * 
+   * 
+   * @return \Data\Utilities\ArrayManipulator
+   */
+  public function pop()
+  {
+    return $this->return(\array_pop($this->value), $this->value);
+  }
+
+  /**
+   * 
+   * 
+   * @return \Data\Utilities\ArrayManipulator
+   */
+  public function shift()
+  {
+    return $this->return(\array_shift($this->value), $this->value);
+  }
 }
 ?>
