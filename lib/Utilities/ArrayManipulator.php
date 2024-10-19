@@ -82,12 +82,59 @@ final class ArrayManipulator extends CustomReturner
   /**
    * 
    * 
+   * @param array|string $separator [optional]
+   * @return \Data\Utilities\StringManipulator
+   */
+  public function implode($separator = "")
+  {
+    return $this->return($this->phpModel('implode', $separator, $this->value));
+  }
+
+  /**
+   * 
+   * 
+   * @param array|string $separator [optional]
+   * @return \Data\Utilities\StringManipulator
+   */
+  public function join($separator = "")
+  {
+    return $this->return($this->phpModel('join', $separator, $this->value));
+  }
+
+  /**
+   * 
+   * 
+   * @param int $flag [optional]
+   * @return \Data\Utilities\ArrayManipulator
+   */
+  public function unique(int $flag = \SORT_STRING)
+  {
+    return $this->return($this->phpModel('array_unique', $this->value, $flag));
+  }
+
+  /**
+   * 
+   * 
    * @param array $values [required]
    * @return \Data\Utilities\ArrayManipulator
    */
   public function combine(array $values)
   {
     return $this->return(\array_combine($this->value, $values), $this->value);
+  }
+
+  /**
+   * 
+   * 
+   * @param int      $offset       [optional]
+   * @param int|null $length       [optional]
+   * @param bool     $preserve_key [optional]
+   * 
+   * @return \Data\Utilities\ArrayManipulator
+   */
+  public function slice(int $offset = 0, int $length = null, bool $preserve_key = false)
+  {
+    return $this->return($this->phpModel('array_slice', $this->value, $offset, $length, $preserve_key));
   }
 }
 ?>
