@@ -65,5 +65,29 @@ final class ArrayManipulator extends CustomReturner
   {
     return $this->return(\array_shift($this->value), $this->value);
   }
+
+  /**
+   * 
+   * 
+   * @param mixed $value  [required]
+   * @param mixed $values [optional]
+   * 
+   * @return \Data\Utilities\NumericManipulator
+   */
+  public function unshift($value, ...$values)
+  {
+    return $this->return(\array_unshift($this->value, $value, ...$values), $this->value);
+  }
+
+  /**
+   * 
+   * 
+   * @param array $values [required]
+   * @return \Data\Utilities\ArrayManipulator
+   */
+  public function combine(array $values)
+  {
+    return $this->return(\array_combine($this->value, $values), $this->value);
+  }
 }
 ?>
