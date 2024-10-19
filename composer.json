@@ -1,6 +1,6 @@
 {
   "name": "container/data",
-  "description": "",
+  "description": "Data is a lightweight PHP library for simplifying string, array, and object manipulation with intuitive methods.",
   "type": "library",
   "keywords": ["data", "php", "helper", "manipulator"],
   "license": "MIT",
