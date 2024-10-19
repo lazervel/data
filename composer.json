@@ -1,5 +1,5 @@
 {
-  "name": "express/data",
+  "name": "php/data",
   "description": "",
   "type": "library",
   "keywords": ["data", "php", "helper", "manipulator"],
@@ -15,6 +15,20 @@
       "name": "Shahzada Modassir",
       "email": "codingmodassir@gmail.com",
       "homepage": "https://github.com/shahzadamodassir"
+    }
+  ],
+  "funding": [
+    {
+      "type": "Github",
+      "url": "https://github.com/shahzadamodassir"
+    },
+    {
+      "type": "Patreon",
+      "url": "https://patreon.com/shahzadamodassir"
+    },
+    {
+      "type": "opencollective",
+      "url": "https://opencollective.com/shahzadamodassir"
     }
   ],
   "minimum-stability": "dev"
