@@ -6,14 +6,19 @@
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Data\\": "lib/"
-    }
+      "Data\\": "src/"
+    },
+    "files": [
+      "src/Helper/Helper.php"
+    ]
   },
-  "require": {},
+  "require": {
+    "javercel/regexp": "^1.0"
+  },
   "authors": [
     {
       "name": "Shahzada Modassir",
-      "email": "codingmodassir@gmail.com",
+      "email": "shahzadamodassir@gmail.com",
       "homepage": "https://github.com/shahzadamodassir"
     }
   ],
@@ -27,9 +32,12 @@
       "url": "https://patreon.com/shahzadamodassir"
     },
     {
-      "type": "opencollective",
+      "type": "Opencollective",
       "url": "https://opencollective.com/shahzadamodassir"
     }
   ],
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "require-dev": {
+    "testunit/testunit": "^1.0"
+  }
 }

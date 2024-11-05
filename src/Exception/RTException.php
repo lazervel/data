@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Data\Exception;
+namespace Path\Exception;
 
 class RTException extends \RuntimeException implements RTExceptionInterface
 {

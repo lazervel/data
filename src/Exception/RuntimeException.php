@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Filesystem\Exception;
+namespace Path\Exception;
 
 class RuntimeException extends \RuntimeException implements ExceptionInterface
 {
