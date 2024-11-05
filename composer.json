@@ -13,7 +13,7 @@
     ]
   },
   "require": {
-    
+    "javercel/regexp": "^2.0"
   },
   "authors": [
     {
