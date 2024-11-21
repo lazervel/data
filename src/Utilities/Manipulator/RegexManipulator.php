@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Data\Utilities\Manipulator;
+namespace Container\Data\Utilities\Manipulator;
 
-use Data\Utilities\Manipulator\StringManipulator;
+use Container\Data\Utilities\Manipulator\StringManipulator;
 use RegExp\RegExp;
 
 final class RegexManipulator extends StringManipulator

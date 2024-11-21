@@ -1,16 +1,13 @@
 {
   "name": "container/data",
-  "description": "Data is a lightweight PHP library for simplifying string, array, and object manipulation with intuitive methods.",
+  "description": "Data PHP library for simplifying string, array, and object manipulation with intuitive methods.",
   "type": "library",
   "keywords": ["data", "php", "helper", "manipulator"],
   "license": "MIT",
   "autoload": {
     "psr-4": {
-      "Data\\": "src/"
-    },
-    "files": [
-      "src/Helper/Helper.php"
-    ]
+      "Container\\Data\\": "src/"
+    }
   },
   "require": {
     "javercel/regexp": "^2.0"

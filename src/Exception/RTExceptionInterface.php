@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Path\Exception;
+namespace Container\Data\Exception;
 
 interface RTExceptionInterface extends ExceptionInterface
 {

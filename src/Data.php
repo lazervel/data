@@ -2,10 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Data;
+/**
+ * Data PHP library for simplifying string, array, and object manipulation with intuitive methods.
+ */
 
-use Data\Custom\CustomManipulator;
-use Data\Base\Base;
+namespace Container\Data;
+
+use Container\Data\Custom\CustomManipulator;
+use Container\Data\Base\Base;
 
 class Data extends Base
 {

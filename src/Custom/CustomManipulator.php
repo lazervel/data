@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Data\Custom;
+namespace Container\Data\Custom;
 
-use Data\Exception\MethodNotFoundException;
-use Data\Base\Base;
+use Container\Data\Exception\MethodNotFoundException;
+use Container\Data\Base\Base;
 
 /**
  * @uses Compiler

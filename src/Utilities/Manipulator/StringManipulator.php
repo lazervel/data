@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Data\Utilities\Manipulator;
+namespace Container\Data\Utilities\Manipulator;
 
-use Data\Custom\CustomManipulator;
+use Container\Data\Custom\CustomManipulator;
 
 class StringManipulator extends CustomManipulator implements ManipulatorInterface
 {

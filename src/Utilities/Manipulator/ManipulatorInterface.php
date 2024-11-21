@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Data\Utilities\Manipulator;
+namespace Container\Data\Utilities\Manipulator;
 
 interface ManipulatorInterface
 {

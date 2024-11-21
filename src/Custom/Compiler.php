@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Data\Custom;
+namespace Container\Data\Custom;
 
-use Data\Utilities\Manipulator\ArrayAssocManipulator;
-use Data\Utilities\Manipulator\NumericManipulator;
-use Data\Utilities\Manipulator\ObjectManipulator;
-use Data\Utilities\Manipulator\ArrayManipulator;
-use Data\Utilities\Manipulator\RegexManipulator;
-use Data\Utilities\Manipulator\StringManipulator;
-use Data\Utilities\Manipulator\FunctionManipulator;
-use Data\Utilities\Manipulator\ResourceManipulator;
+use Container\Data\Utilities\Manipulator\ArrayAssocManipulator;
+use Container\Data\Utilities\Manipulator\NumericManipulator;
+use Container\Data\Utilities\Manipulator\ObjectManipulator;
+use Container\Data\Utilities\Manipulator\ArrayManipulator;
+use Container\Data\Utilities\Manipulator\RegexManipulator;
+use Container\Data\Utilities\Manipulator\StringManipulator;
+use Container\Data\Utilities\Manipulator\FunctionManipulator;
+use Container\Data\Utilities\Manipulator\ResourceManipulator;
 use RegExp\RegExp;
 
 /**

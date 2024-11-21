@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Data\Custom;
+namespace Container\Data\Custom;
 
 interface CustomManipulatorInterface
 {
