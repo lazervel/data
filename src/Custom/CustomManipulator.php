@@ -31,7 +31,8 @@ class CustomManipulator extends Base implements CustomManipulatorInterface
   /**
    * Returns The CustomManipulator instance with the current or lastes value.
    * 
-   * @return \Data\Custom\CustomManipulatorInterface
+   * @param mixed $value [required]
+   * @return \Container\Data\Custom\CustomManipulatorInterface
    */
   public function return($value)
   {
@@ -53,7 +54,7 @@ class CustomManipulator extends Base implements CustomManipulatorInterface
   /**
    * Returns The CustomManipulator instance with previous or initial value.
    * 
-   * @return \Data\Custom\CustomManipulatorInterface
+   * @return \Container\Data\Custom\CustomManipulatorInterface
    */
   public function prevWith()
   {
@@ -64,7 +65,7 @@ class CustomManipulator extends Base implements CustomManipulatorInterface
    * Returns The CustomManipulator instance with override value.
    * 
    * @param mixed $value [required]
-   * @return \Data\Custom\CustomManipulatorInterface
+   * @return \Container\Data\Custom\CustomManipulatorInterface
    */
   public function override($value)
   {
@@ -87,7 +88,7 @@ class CustomManipulator extends Base implements CustomManipulatorInterface
   /**
    * Returns The CustomManipulator instance compile with current value.
    * 
-   * @return \Data\Custom\CustomManipulatorInterface
+   * @return \Container\Data\Custom\CustomManipulatorInterface
    */
   public function compile()
   {
@@ -105,7 +106,7 @@ class CustomManipulator extends Base implements CustomManipulatorInterface
    * @param string $name      [required]
    * @param array  $arguments [optional]
    * 
-   * @throws \Data\Exception\MethodNotFoundException When trying to access private or undefined method.
+   * @throws \Container\Data\Exception\MethodNotFoundException When trying to access private or undefined method.
    */
   public function __call($name, $arguments) : void
   {

@@ -20,7 +20,7 @@ use RegExp\RegExp;
 trait Compiler
 {
   /**
-   * 
+   * Register all Manipulators with name, It's used to Compiling Manipulator
    * 
    * @var array<string,string> $MANIPULATORS
    */
@@ -36,9 +36,11 @@ trait Compiler
   ];
 
   /**
+   * Check array associative or none-associative of given $array, If $array is
+   * associative then return true, Otherwise false
    * 
    * @param array $array [required]
-   * @return bool
+   * @return bool If array assoc return true, Otherwise false
    */
   private function isAssoc(array $array) : bool
   {
@@ -47,10 +49,10 @@ trait Compiler
   }
 
   /**
-   * 
+   * Compiling the given $value and Returns a matched Manipulator instance
    * 
    * @param mixed $value [required]
-   * @return \Data\Custom\CustomManipulatorInterface
+   * @return \Container\Data\Custom\CustomManipulatorInterface
    */
   private function doCompile($value)
   {

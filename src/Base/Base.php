@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Container\Data\Base;
 
+use Container\Data\Exception\RTException;
+
 /**
  * @internal
  */
@@ -18,7 +20,7 @@ abstract class Base
   /**
    * Returns The CustomManipulator instance with previous or initial value.
    * 
-   * @return \Data\Custom\CustomManipulatorInterface
+   * @return \Container\Data\Custom\CustomManipulatorInterface
    */
   abstract public function prevWith();
 
@@ -160,7 +162,7 @@ abstract class Base
   private static function throwIfFunctionNotExists(string $func) : void
   {
     if (!\function_exists($func)) {
-      throw new RTException(\sprintf('Unable to perform data operation because the "%s()" function has been disabled.'), $func);
+      throw new RTException(\sprintf('Unable to perform data operation because the "%s()" function has been disabled.', $func));
     }
   }
 }
